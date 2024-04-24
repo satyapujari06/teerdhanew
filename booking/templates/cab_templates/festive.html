@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Festive card</title>
+  <style>
+
+.content {
+  max-width: 1200px;
+  margin: auto;
+  background: #f9f9f9;
+  padding: 10px;
+}
+
+    body {
+  font-family: Arial, sans-serif;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+    h1 {
+      text-align: center;
+      color: #f15151;
+      font-size: 40px;
+      margin-bottom: 40px;
+    }
+
+ 
+   
+  .wrapperDiv {
+    text-align: center;
+  }
+  .centeredDiv {
+    width: 100 px;
+    display: inline-block;
+  }
+
+
+/* 
+    .card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; 
+  margin-top: 20px;
+  margin: 0 auto;
+  padding: 20px;
+} */
+
+
+    
+.card-body {
+  padding: 20px;
+  
+}
+
+    .card-title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333333;
+      margin-bottom: 10px;
+    }
+    ul {
+      list-style-type: disc; 
+      padding: 0 15px; 
+    }
+    li {
+      font-size: 18px;
+      color: #555555;
+      margin-bottom: 8px;
+    }
+   
+    
+    .card-title {
+      font-size: 22px; 
+      color: black; 
+      margin-bottom: 15px; 
+    }
+    
+    ul {
+      list-style-type: disc; 
+      padding-left: 20px;
+      margin-bottom: 0;
+    }
+    
+    li {
+      font-size: 16px; 
+      color: black; 
+      margin-bottom: 8px;
+    }
+    
+
+    .card {
+  background-color: lavenderblush;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: auto;
+  display: inline-block; /* Display cards inline */
+}
+
+.custom-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.custom-button:hover {
+  background-color: #c82333;
+}
+    
+    
+    .card-image img {
+    max-width: 120%;
+    height: 450px;
+    width: 1300px;
+}
+        
+
+
+
+@media (max-width: 768px) {
+  
+.card-content {
+    padding: 2vh;
+    margin-bottom: 2vh;
+}
+    .card-content h3 {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+    .card-content p {
+        font-size: 18px;
+    }
+    .card-title {
+        font-size: 20px;
+    }
+    .card-body ul li {
+        font-size: 18px;
+    }
+}
+
+
+
+.card-content {
+    padding: 2vh;
+    margin-bottom: 2vh;
+    text-align: right;
+}
+
+.card-content h3 {
+    font-size: 22px;
+    margin-bottom: 1vh;
+}
+
+.card-content p {
+    font-size: 20px;
+  
+}
+
+.card-title {
+    font-size: 20px;
+   
+}
+
+.card-body ul li {
+    font-size: 18px;
+} 
+
+
+  </style>
+</head>
+<body>
+
+  <div>
+    {% for i in res %}
+        <div class="card-image" style="margin-bottom: -3px; text-align: center;margin-top: -5px">
+            {% if i.photo %}
+            <img src="{{ i.photo }}" class="card-image" alt="Card Image">  
+            {% endif %}
+        </div>
+    {% endfor %}
+</div>
+
+<!-- <div class="container"> -->
+<br><br><br>
+
+<div class="content">
+<div class="card mb-3">
+  <div class="card-body">
+    {% for i in res %}
+      {% if i.title %}
+        <h4 class="card-title">{{ i.title }}</h4>
+        <ul>
+          {% if i.point1 %}
+          <li>{{i.point1}}</li>
+          {% endif %}
+          {% if i.point2 %}
+          <li>{{i.point2}}</li>
+          {% endif %}
+          {% if i.point3 %}
+          <li>{{i.point3}}</li>
+          {% endif %}
+          {% if i.point4 %}
+          <li>{{i.point4}}</li>
+          {% endif %}
+          {% if i.point5 %}
+          <li>{{i.point5}}</li>
+          {% endif %}
+          {% if i.point6 %}
+          <li>{{i.point6}}</li>
+          {% endif %}
+          {% if i.point7 %}
+          <li>{{i.point7}}</li>
+          {% endif %}
+          {% if i.point8 %}
+          <li>{{i.point8}}</li>
+          {% endif %}
+          {% if i.point9 %}
+          <li>{{i.point9}}</li>
+          {% endif %}
+          {% if i.point10 %}
+          <li>{{i.point10}}</li>
+          {% endif %}
+          {% if i.point11 %}
+          <li>{{i.point11}}</li>
+          {% endif %}
+          {% if i.point12 %}
+          <li>{{i.point12}}</li>
+          {% endif %}
+        </ul>
+      {% endif %}
+    {% endfor %}  
+  </div>
+</div>  
+</div>
+</div>
+
+<center>
+    <button class="custom-button">
+        <b><a href="/cab_main/" style="color: white; text-decoration: none;">Book Now</a></b>
+    </button>
+  </center>
+</body>
+</html>
