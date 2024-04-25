@@ -39,7 +39,6 @@ PyJWT
 pypdf
 pypng
 python-bidi
-python-conductor
 python-utils
 pytz
 PyYAML
